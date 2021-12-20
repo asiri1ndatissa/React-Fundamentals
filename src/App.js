@@ -1,4 +1,4 @@
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
@@ -22,13 +22,12 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
   return (
     <div>
       <h2>Let's get started!</h2>
       <p>this is a paragrapgh</p>
-      {expenses.map((expense, index) => <ExpenseItem key={`expense${index}`} title={expense.title}
-        amount={expense.amount}
-        date={expense.date} />)}
+      <Expenses items={expenses} />
     </div>
   );
 }
